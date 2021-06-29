@@ -7,7 +7,7 @@ const mime = require('mime-types')
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null,'uploads/')
+      cb(null,'tmp/uploads/')
     },
     filename: function (req,file,cb) {
         /* generates a "unique" name - not collision proof but unique enough for small sized applications */

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const publisherController = require('../controllers/publisherController')
 const multer = require('multer')
-const upload = multer({dest: '/uploads/'})
+const upload = multer({dest: '/tmp/uploads/'})
 
 router.get('/', publisherController.findAll);
 

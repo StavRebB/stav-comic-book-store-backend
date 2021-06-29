@@ -13,7 +13,7 @@ const addPictures = (mainImage, pictures) => {
         const match = image.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/)
         const buffer = Buffer.from(match[2], 'base64')
 
-        fs.writeFile(path.join(__dirname, '..', 'uploads', 'photoSrc', 'members', picture.title), buffer , { flag: 'wx' }, (err) => {
+        fs.writeFile(path.join('tmp', 'uploads', 'photoSrc', 'members', picture.title), buffer , { flag: 'wx' }, (err) => {
             if(err)
                 console.log(err)
         })

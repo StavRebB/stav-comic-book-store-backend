@@ -3,7 +3,7 @@ var router = express.Router();
 require('dotenv').config()
 var transporter = require('../config/mail.config')
 const multer = require('multer');
-const upload = multer({dest: '/uploads/'});
+const upload = multer({dest: '/tmp/uploads/'});
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
